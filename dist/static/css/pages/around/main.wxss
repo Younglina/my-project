@@ -1,0 +1,10 @@
+@import "/static/css/vendor.wxss";
+
+.map_container.data-v-2bd42490 {
+  height: 600rpx;
+  width: 100%;
+}
+.map.data-v-2bd42490 {
+  height: 100%;
+  width: 100%;
+}

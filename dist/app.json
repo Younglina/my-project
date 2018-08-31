@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/userrecomd/main",
+    "pages/around/main",
+    "pages/comment/main",
+    "pages/musicIndex/main",
+    "pages/newsong/main",
+    "pages/paihang/main",
+    "pages/playing/main",
+    "pages/searchPage/main",
+    "pages/songList/main",
+    "pages/songlistRecomd/main",
+    "pages/user/main"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "我的音乐",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor": "red",
+    "color": "black",
+    "list": [
+      {
+        "pagePath": "pages/userrecomd/main",
+        "text": "发现",
+        "iconPath": "/resource/img/wyy2.png",
+        "selectedIconPath": "/resource/img/wyys2.png"
+      },
+      {
+        "pagePath": "pages/searchPage/main",
+        "text": "搜索",
+        "iconPath": "/resource/img/music.png",
+        "selectedIconPath": "/resource/img/musics.png"
+      },
+      {
+        "pagePath": "pages/user/main",
+        "text": "账号",
+        "iconPath": "/resource/img/zhanghao.png",
+        "selectedIconPath": "/resource/img/zhanghaos.png"
+      }
+    ]
+  }
+}

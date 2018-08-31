@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "推荐歌单",
+  "usingComponents": {
+    "i-load-more": "../../iview/load-more/index"
+  }
+}

@@ -1,0 +1,122 @@
+@import "/static/css/vendor.wxss";
+
+.main.data-v-22b36e4e {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.lrcMain.data-v-22b36e4e {
+  flex-grow: 1;
+}
+.playMain.data-v-22b36e4e {
+  flex-shrink: 1;
+}
+.background.data-v-22b36e4e {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(60rpx);
+}
+.filter.data-v-22b36e4e {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.6;
+}
+.lyric-wrapper.data-v-22b36e4e {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  vertical-align: top;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.lyric.data-v-22b36e4e {
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  overflow-y: auto;
+}
+.text.data-v-22b36e4e {
+  line-height: 80rpx;
+  color: #c7c7c7;
+  font-size: 28rpx;
+}
+.current.data-v-22b36e4e {
+  color: #fff;
+}
+.playControl.data-v-22b36e4e {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  color: white;
+}
+.btmHead.data-v-22b36e4e,
+.btmSub.data-v-22b36e4e {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.btmSub.data-v-22b36e4e {
+  margin-right: 32rpx;
+}
+.lrcDiv.data-v-22b36e4e {
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+.btmSheet.data-v-22b36e4e {
+  width: 100%;
+  height: 800rpx;
+  overflow-y: auto;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.btmItem.data-v-22b36e4e {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-between;
+  border-bottom: 2rpx solid rgba(0,0,0,.12);
+}
+.btmName.data-v-22b36e4e {
+  font-size: 24rpx;
+  color: gray;
+}
+.btmIcon ._i.data-v-22b36e4e {
+  font-size: 10rpx;
+}
+.playControl ._i.data-v-22b36e4e {
+  font-size: 76rpx;
+}
+@keyframes rotates-data-v-22b36e4e {
+from {
+    transform: rotate(0deg);
+}
+to {
+    transform: rotate(360deg);
+}
+}
+.rotateImg.data-v-22b36e4e {
+  position: absolute;
+  width: 600rpx;
+  height: 600rpx;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.musicImg.data-v-22b36e4e {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  animation: rotates-data-v-22b36e4e 20s linear infinite;
+}

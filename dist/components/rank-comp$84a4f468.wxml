@@ -1,0 +1,8 @@
+<template name="rank-comp$84a4f468">
+  <view class="_div data-v-5d5d333b item">
+    <image class="_image data-v-5d5d333b rankImg" src="{{img}}"></image>
+    <view class="_div data-v-5d5d333b songs">
+      <label class="_span data-v-5d5d333b songItem" wx:for="{{items}}" wx:for-index="index" wx:for-item="item">{{index+1}}.{{item.name}}-{{item.ar[0].name}}</label>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,12 @@
+<template name="around$ceb27adc">
+  <view class="_div data-v-2bd42490">
+    <view class="_div data-v-2bd42490 map_container">
+      <map class="_map data-v-2bd42490 map" id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="14" show-location="true" markers="{{markers}}" bindmarkertap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"></map>
+    </view>
+    <view class="_div data-v-2bd42490 place_info">
+      <view class="_p data-v-2bd42490">{{placeData.title}}</view>
+      <view class="_p data-v-2bd42490">{{placeData.address}}</view>
+      <view bindtap="handleProxy" data-eventid="{{'1'}}" data-comkey="{{$k}}" class="_p data-v-2bd42490">{{placeData.telephone}}</view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,118 @@
+@import "/static/css/vendor.wxss";
+
+.songlist.data-v-7e93a230,
+.top.data-v-7e93a230,
+.iconList.data-v-7e93a230,
+.songCreator.data-v-7e93a230,
+.creatorMain.data-v-7e93a230,
+.creatorRight.data-v-7e93a230,
+.iconItem.data-v-7e93a230,
+.firstList.data-v-7e93a230,
+.firstListR.data-v-7e93a230,
+.firstListL.data-v-7e93a230,
+.btmSheet.data-v-7e93a230 {
+  display: flex;
+}
+.songlist.data-v-7e93a230,
+.creatorRight.data-v-7e93a230,
+.creator.data-v-7e93a230,
+.iconItem.data-v-7e93a230 {
+  flex-direction: column;
+}
+.songlist.data-v-7e93a230,
+.songlistContain.data-v-7e93a230 {
+  height: 100%;
+}
+.firstList.data-v-7e93a230,
+.firstListR.data-v-7e93a230,
+.firstListL.data-v-7e93a230,
+.iconItem.data-v-7e93a230,
+.songCreator.data-v-7e93a230 {
+  align-items: center;
+}
+.avatar.data-v-7e93a230 {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+.songlistContain.data-v-7e93a230 {
+  background-color: white;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.iconList.data-v-7e93a230,
+.top.data-v-7e93a230,
+.creatorMain.data-v-7e93a230 {
+  justify-content: space-around;
+}
+.firstList.data-v-7e93a230 {
+  justify-content: space-between;
+}
+.firstListL.data-v-7e93a230 {
+  padding-left: 20rpx;
+}
+.firstListR.data-v-7e93a230 {
+  border-top-right-radius: 20rpx;
+  background-color: red;
+  padding: 16rpx 32rpx;
+  color: white;
+}
+.top.data-v-7e93a230 {
+  width: 100%;
+  color: white;
+  padding: 0 20rpx;
+}
+.iconList.data-v-7e93a230 {
+  margin-bottom: 20rpx;
+}
+.top ._i.data-v-7e93a230 {
+  font-size: 60rpx;
+}
+.creatorMain.data-v-7e93a230 {
+  padding: 32rpx;
+}
+.iconItem.data-v-7e93a230 {
+  color: white;
+}
+.iconItem ._span.data-v-7e93a230 {
+  font-size: 24rpx;
+}
+.songImg.data-v-7e93a230 {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 6rpx;
+}
+.songCreator.data-v-7e93a230 {
+  margin-top: 40rpx;
+}
+.creatorRight.data-v-7e93a230 {
+  justify-content: center;
+  padding: 0 32rpx;
+}
+.songName.data-v-7e93a230 {
+  font-size: 32rpx;
+  color: white;
+  font-weight: bold;
+}
+.background.data-v-7e93a230 {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.6;
+  filter: blur(60rpx);
+}
+.btmSheet.data-v-7e93a230 {
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+}
+.btmItem.data-v-7e93a230 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.btmIcon.data-v-7e93a230 {
+  margin-top: 10rpx;
+  margin-right: 20rpx;
+}

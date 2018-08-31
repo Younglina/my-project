@@ -1,0 +1,74 @@
+<template name="indexPage$e263b742">
+  <view style="padding:0 5px;" class="_div data-v-5c489dfc">
+    <view class="_div data-v-5c489dfc carouselDiv">
+      <swiper indicator-dots indicator-color="glay" indicator-active-color="red" autoplay="2000" circular class="_swiper data-v-5c489dfc">
+        <block wx:key="item.id" key="{{item.id}}" wx:for="{{mvFirst}}" wx:for-index="index" wx:for-item="item">
+          <swiper-item class="_swiper-item data-v-5c489dfc">
+            <image src="{{item.cover}}" class="_image data-v-5c489dfc"></image>
+          </swiper-item>
+        </block>
+      </swiper>
+    </view>
+    <view class="_div data-v-5c489dfc centerView">
+      <view class="_div data-v-5c489dfc innerView">
+        <view class="_div data-v-5c489dfc">
+          <i-icon class="_i-icon data-v-5c489dfc micon" type="addressbook" size="28" color="red"></i-icon>
+        </view>
+        <label class="_span data-v-5c489dfc iconSpan">私人</label>
+      </view>
+      <view class="_div data-v-5c489dfc innerView">
+        <view class="_div data-v-5c489dfc">
+          <i-icon class="_i-icon data-v-5c489dfc micon" type="activity" size="28" color="red"></i-icon>
+        </view>
+        <label class="_span data-v-5c489dfc iconSpan">每日推荐</label>
+      </view>
+      <view class="_div data-v-5c489dfc innerView">
+        <view class="_div data-v-5c489dfc">
+          <i-icon class="_i-icon data-v-5c489dfc micon" type="createtask" size="28" color="red" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}"></i-icon>
+        </view>
+        <label class="_span data-v-5c489dfc iconSpan">歌单</label>
+      </view>
+      <view class="_div data-v-5c489dfc innerView">
+        <view class="_div data-v-5c489dfc">
+          <i-icon class="_i-icon data-v-5c489dfc micon" type="barrage" size="28" color="red"></i-icon>
+        </view>
+        <label class="_span data-v-5c489dfc iconSpan">排行榜</label>
+      </view>
+    </view>
+    <view class="_div data-v-5c489dfc personalized">
+      <label class="_span data-v-5c489dfc perSpan">推荐歌单></label>
+      <view class="_div data-v-5c489dfc gdView">
+        <view class="_div data-v-5c489dfc gdInnerView" wx:key="item.id" key="{{item.id}}" id="{{item.id}}" bindtap="handleProxy" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" wx:for="{{recommendResource}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-5c489dfc playCountMain">
+            <view class="_div data-v-5c489dfc playCount">
+              <i-icon type="customerservice" class="_i-icon data-v-5c489dfc"></i-icon>
+              <label class="_span data-v-5c489dfc">{{item.playCount}}</label>
+            </view>
+            <image class="_img data-v-5c489dfc innerImg" src="{{item.picUrl}}"></image>
+          </view>
+          <label class="_span data-v-5c489dfc innerText">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-5c489dfc personalized">
+      <label class="_span data-v-5c489dfc perSpan">推荐新音乐></label>
+      <view class="_div data-v-5c489dfc gdView">
+        <view class="_div data-v-5c489dfc gdInnerView" wx:key="item.id" key="{{item.id}}" wx:for="{{personalizedNewsong}}" wx:for-index="index" wx:for-item="item">
+          <image class="_img data-v-5c489dfc innerImg" src="{{item.song.album.blurPicUrl}}"></image>
+          <label class="_span data-v-5c489dfc innerText">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+    <view class="_div data-v-5c489dfc personalized">
+      <label class="_span data-v-5c489dfc perSpan">推荐节目></label>
+      <view class="_div data-v-5c489dfc gdView">
+        <view class="_div data-v-5c489dfc gdInnerView" wx:key="item.id" key="{{item.id}}" wx:for="{{personalizedDJprogram}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-5c489dfc">
+            <image class="_img data-v-5c489dfc innerImg" src="{{item.picUrl}}"></image>
+          </view>
+          <label class="_span data-v-5c489dfc innerText">{{item.name}}</label>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

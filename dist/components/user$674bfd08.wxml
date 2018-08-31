@@ -1,0 +1,22 @@
+<template name="user$674bfd08">
+  <view class="_div data-v-5f924850">
+    <view class="_view data-v-5f924850 userView" style=" {{('background-image:' + ('url(' + backgroundUrl + ')') + ';')}}">
+      <view class="_view data-v-5f924850 user">
+        <image class="_image data-v-5f924850 avatar" src="{{avatarUrl}}"></image>
+        <text class="_text data-v-5f924850 nickname">{{nickname}}</text>
+      </view>
+    </view>
+    <view class="_view data-v-5f924850 mid">
+      <block wx:key="item.id" key="{{item.id}}" wx:for="{{musicList}}" wx:for-index="index" wx:for-item="item">
+        <view class="_view data-v-5f924850 page__bd-mid">
+          <view class="_view data-v-5f924850 page__bd-midImage center">
+            <image src="{{item.url}}" class="_image data-v-5f924850"></image>
+          </view>
+          <view class="_view data-v-5f924850 page__bd-midContent">
+            <text class="_text data-v-5f924850 page__bd-contenWords">{{item.words}}</text>
+          </view>
+        </view>
+      </block>
+    </view>
+  </view>
+</template>

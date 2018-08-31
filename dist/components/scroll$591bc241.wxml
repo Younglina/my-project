@@ -1,0 +1,7 @@
+<import src="slots" />
+<template name="scroll$591bc241">
+  <view ref="wrapper" class="_div data-v-2e0da332">
+    <template name="default"></template>
+    <template data="{{...$root[$k], $root}}" is="{{$slotdefault || 'default'}}"></template>
+  </view>
+</template>

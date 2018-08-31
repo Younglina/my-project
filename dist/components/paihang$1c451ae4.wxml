@@ -1,0 +1,62 @@
+<import src="rank-comp$84a4f468" />
+<template name="paihang$1c451ae4">
+  <view class="_div data-v-02086006">
+    <i-load-more wx:if="{{loading}}" loading="{{loading}}" class="_i-load-more data-v-02086006"></i-load-more>
+    <view class="_div data-v-02086006 rank" wx:else>
+      <view class="_div data-v-02086006 rankMain">
+        <label class="_span data-v-02086006">官方榜</label>
+        <view class="_div data-v-02086006">
+          <template data="{{...$root[$kk+'0'], $root}}" is="rank-comp$84a4f468"></template>
+          <template data="{{...$root[$kk+'1'], $root}}" is="rank-comp$84a4f468"></template>
+          <template data="{{...$root[$kk+'2'], $root}}" is="rank-comp$84a4f468"></template>
+          <template data="{{...$root[$kk+'3'], $root}}" is="rank-comp$84a4f468"></template>
+        </view>
+      </view>
+      <view class="_div data-v-02086006">
+        <label class="_span data-v-02086006">全球榜</label>
+        <view class="_div data-v-02086006 rankDiv">
+          <view class="_div data-v-02086006 rankInner">
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.sc}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">说唱TOP榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.dy}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">云音乐电音榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.xh}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">云音乐嘻哈榜</label>
+            </view>
+          </view>
+          <view class="_div data-v-02086006 rankInner">
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.douy}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">抖音排行榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.acg}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">云音乐ACG榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.gd}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">云音乐国电榜</label>
+            </view>
+          </view>
+          <view class="_div data-v-02086006 rankInner">
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.dj}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">电竞音乐榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.mg}}" class="_img data-v-02086006"></image>
+              <label class="_span data-v-02086006">美国Billboard周榜</label>
+            </view>
+            <view class="_div data-v-02086006">
+              <image src="{{imgs.ituns}}" class="_img data-v-02086006"></image>iTunes榜</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

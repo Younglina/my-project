@@ -1,0 +1,24 @@
+@import "/static/css/vendor.wxss";
+
+.hotSearch.data-v-a85d0664 {
+  border-radius: 72rpx;
+  border: 2rpx solid silver;
+  padding: 10rpx 20rpx;
+  margin: 10rpx;
+  display: inline-block;
+  font-size: 28rpx;
+}
+.hotSearch.data-v-a85d0664:hover {
+  background-color: silver;
+  color: white;
+}
+.hotItems.data-v-a85d0664 {
+  display: flex;
+}
+.searchList.data-v-a85d0664 {
+  height: 100%;
+  overflow-y: auto;
+}
+.songlistName.data-v-a85d0664 {
+  flex-grow: 1;
+}

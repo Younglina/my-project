@@ -1,0 +1,9 @@
+<template name="newsong$e8856038">
+  <view class="_div data-v-c82f8548">
+    <i-cell-group bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}" class="_i-cell-group data-v-c82f8548">
+      <i-cell wx:key="item.id" key="{{item.id}}" title="{{item.name}}" label="{{item.song.artists[0].name +'-'+ item.song.album.name}}" data-id="{{item.id}}" data-index="{{index}}" wx:for="{{songList}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-c82f8548">
+        <label slot="icon" class="_span data-v-c82f8548">{{index+1}}</label>
+      </i-cell>
+    </i-cell-group>
+  </view>
+</template>

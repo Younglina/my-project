@@ -1,0 +1,67 @@
+<template name="songlist$2bb53d68">
+  <view class="_div data-v-7e93a230">
+    <i-spin custom wx:if="{{!loading}}" class="_i-spin data-v-7e93a230">
+      <i-icon type="refresh" size="20" i-class="icon-load" class="_i-icon data-v-7e93a230"></i-icon>
+    </i-spin>
+    <view class="_div data-v-7e93a230 songlist" wx:if="{{loading}}">
+      <image src="{{songList.coverImgUrl}}" class="_img data-v-7e93a230 background"></image>
+      <view class="_div data-v-7e93a230">
+        <view class="_div data-v-7e93a230 creatorMain">
+          <view class="_div data-v-7e93a230">
+            <image class="_img data-v-7e93a230 songImg" src="{{songList.coverImgUrl}}"></image>
+          </view>
+          <view class="_div data-v-7e93a230 creatorRight">
+            <view class="_div data-v-7e93a230">
+              <label class="_span data-v-7e93a230 songName">{{songList.name}}</label>
+            </view>
+            <view class="_div data-v-7e93a230 songCreator">
+              <image src="{{songList.creator.avatarUrl}}" class="_img data-v-7e93a230 avatar"></image>
+              <label style="font-size: 12px;color:azure;margin-left: 5px" class="_span data-v-7e93a230">{{songList.creator.nickname}}</label>
+              <i-icon type="enter" size="14" color="azure" class="_i-icon data-v-7e93a230"></i-icon>
+            </view>
+          </view>
+        </view>
+        <view class="_div data-v-7e93a230 iconList">
+          <view class="_div data-v-7e93a230 iconItem" bindtap="handleProxy" data-eventid="{{'0'}}" data-comkey="{{$k}}">
+            <i-icon type="message" color="white" size="24" class="_i-icon data-v-7e93a230"></i-icon>
+            <label class="_span data-v-7e93a230">{{songList.commentCount}}</label>
+          </view>
+          <view class="_div data-v-7e93a230 iconItem">
+            <i-icon type="share" color="white" size="24" class="_i-icon data-v-7e93a230"></i-icon>
+            <label class="_span data-v-7e93a230">{{songList.shareCount}}</label>
+          </view>
+          <view class="_div data-v-7e93a230 iconItem">
+            <i-icon type="success" color="white" size="24" class="_i-icon data-v-7e93a230"></i-icon>
+            <label class="_span data-v-7e93a230">下载</label>
+          </view>
+          <view class="_div data-v-7e93a230 iconItem">
+            <i-icon type="editor" color="white" size="24" class="_i-icon data-v-7e93a230"></i-icon>
+            <label class="_span data-v-7e93a230">多选</label>
+          </view>
+        </view>
+      </view>
+      <view class="_div data-v-7e93a230 songlistContain">
+        <view class="_div data-v-7e93a230 firstList" style="height: 100%;padding: 0px">
+          <view class="_div data-v-7e93a230 firstListL">
+            <i-icon type="playon" size="26" class="_i-icon data-v-7e93a230"></i-icon>
+            <label style="font-size:14px;" class="_span data-v-7e93a230">播放全部(共{{songList.trackCount}}首)</label>
+          </view>
+          <view class="_div data-v-7e93a230 firstListR">
+            <i-icon type="add" size="26" class="_i-icon data-v-7e93a230"></i-icon>
+            <label style="font-size:14px;" class="_span data-v-7e93a230">收藏({{songList.subscribedCount}})</label>
+          </view>
+        </view>
+        <view class="_div data-v-7e93a230">
+          <i-cell-group class="_i-cell-group data-v-7e93a230">
+            <i-cell wx:key="item.id" key="{{item.id}}" title="{{item.name}}" label="{{item.ar[0].name +'-'+ item.al.name}}" bindtap="handleProxy" data-eventid="{{'2-'+index}}" data-comkey="{{$k}}" wx:for="{{songList.tracks}}" wx:for-index="index" wx:for-item="item"
+              class="_i-cell data-v-7e93a230">
+              <label slot="icon" class="_span data-v-7e93a230">{{index+1}}</label>
+              <i-icon slot="footer" type="switch" bindtap="handleProxy" data-eventid="{{'1-'+index}}" data-comkey="{{$k}}" class="_i-icon data-v-7e93a230"></i-icon>
+            </i-cell>
+          </i-cell-group>
+        </view>
+      </view>
+      <i-action-sheet visible="{{visible}}" actions="{{actions}}" bindtap="handleProxy" data-eventid="{{'3'}}" data-comkey="{{$k}}" class="_i-action-sheet data-v-7e93a230"></i-action-sheet>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,33 @@
+@import "/static/css/vendor.wxss";
+
+.listT.data-v-782068b0,
+.listR.data-v-782068b0,
+.listMain.data-v-782068b0 {
+  display: flex;
+}
+.listMain.data-v-782068b0 {
+  width: 100%;
+}
+.list.data-v-782068b0 {
+  margin: 20rpx 0;
+}
+.comment.data-v-782068b0 {
+  overflow-y: auto;
+  height: 100%;
+}
+.listR.data-v-782068b0 {
+  flex-direction: column;
+  margin-left: 20rpx;
+  width: 100%;
+}
+.listT.data-v-782068b0 {
+  width: 100%;
+  justify-content: space-between;
+}
+.list ._li.data-v-782068b0 {
+  margin: 20rpx 0;
+}
+.mu-item.data-v-782068b0 {
+  height: 100%;
+  padding: 10rpx 32rpx;
+}

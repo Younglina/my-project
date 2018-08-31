@@ -1,0 +1,1 @@
+<import src="../../components/musicIndex$2835addc" /><template is="musicIndex$2835addc" data="{{ ...$root['0'], $root }}"/>
