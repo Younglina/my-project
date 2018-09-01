@@ -4,8 +4,18 @@
 
 [git地址](https://github.com/lucaswww/my-project)，demo项目代码质量不是很好，哈哈哈哈多多见谅😁
 ### 预览（不动点大图看）
-
 ![](https://user-gold-cdn.xitu.io/2018/8/31/1658e1511bcb13fe?w=250&h=450&f=gif&s=4675839)
+
+### 目前完成
+* 推荐歌单
+* 排行榜
+* 歌单详情
+* 播放页
+* 歌单评论
+* 搜索
+* 扫一扫(基础功能)
+* 周边(百度地图api)
+
 ## 项目搭建
 * 最开始还是要把[微信小程序开发工具](https://developers.weixin.qq.com/miniprogram/dev/devtools/download.html)下载一下
 * mpvue项目建立，跟着官网走一遍是最快的 [快速上手](http://mpvue.com/mpvue/quickstart/)
