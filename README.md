@@ -3,7 +3,7 @@
 后台接口用的是[NeteaseCloudMusicApi](https://binaryify.github.io/NeteaseCloudMusicApi/#/),感谢大佬的分享  
 
 [git地址](https://github.com/lucaswww/my-project)，demo项目代码质量不是很好，哈哈哈哈多多见谅😁
-### 预览
+### 预览（不动点大图看）
 
 ![](https://user-gold-cdn.xitu.io/2018/8/31/1658e1511bcb13fe?w=250&h=450&f=gif&s=4675839)
 ## 项目搭建
