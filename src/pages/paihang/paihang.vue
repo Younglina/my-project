@@ -2,13 +2,13 @@
   <div>
   <i-load-more v-if="loading" :loading="loading" />
   <div class="rank" v-else="!loading">
-    <div  class="rankMain">
+    <div class="rankMain" >
       <span>官方榜</span>
       <div>
-        <rank-comp :img="imgs.bs" :items="bs"></rank-comp>
-        <rank-comp :img="imgs.xg" :items="xg"></rank-comp>
-        <rank-comp :img="imgs.yc" :items="yc"></rank-comp>
-        <rank-comp :img="imgs.rg" :items="rg"></rank-comp>
+        <div @click='toPlayListDetail(bs.playlist.id)'><rank-comp :img="imgs.bs" :items="bs.playlist.tracks.slice(0,3)"></rank-comp></div>
+        <div @click='toPlayListDetail(xg.playlist.id)'><rank-comp :img="imgs.xg" :items="xg.playlist.tracks.slice(0,3)"></rank-comp></div>
+        <div @click='toPlayListDetail(yc.playlist.id)'><rank-comp :img="imgs.yc" :items="yc.playlist.tracks.slice(0,3)"></rank-comp></div>
+        <div @click='toPlayListDetail(rg.playlist.id)'> <rank-comp :img="imgs.rg" :items="rg.playlist.tracks.slice(0,3)"></rank-comp></div>
       </div>
     </div>
     <div>
@@ -68,8 +68,12 @@
       RankComp
     },
     methods:{
-      goback(){
-        this.$router.go(-1)
+      toPlayListDetail(id){
+        // this.$store.commit('setSongListId',id);
+        var url = '../songList/main?id='+id;
+        wx.navigateTo({
+          url
+        })
       },
     },
     mounted(){
@@ -79,10 +83,11 @@
         this.$fly.get(this.$api+"/top/list?idx=2"),
         this.$fly.get(this.$api+"/top/list?idx=1")
       ]).then(this.$fly.spread((bs,xg,yc,rg)=>{
-        this.bs = bs.data.playlist.tracks.slice(0,3);
-        this.xg = xg.data.playlist.tracks.slice(0,3);
-        this.yc = yc.data.playlist.tracks.slice(0,3);
-        this.rg = rg.data.playlist.tracks.slice(0,3);
+        this.bs = bs.data;
+        this.xg = xg.data;
+        this.yc = yc.data;
+        this.rg = rg.data;
+        // this.$store.commit('setRank',[bs.data.playlist,xg.data.playlist,yc.data.playlist,rg.data.playlist]);
         this.loading = false;
       }))
     }

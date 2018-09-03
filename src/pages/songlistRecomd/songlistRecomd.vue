@@ -26,7 +26,7 @@
         <div class="gdInnerView" v-for="item in playlists" :key="item.id" >
           <div class="playCountMain">
             <div class="playCount"><mu-icon value="headset"></mu-icon><span>{{item.playCount | formatData}}</span></div>
-            <img class="innerImg" :src="item.coverImgUrl" :data-index="item.id"/></div>
+            <img class="innerImg" :src="item.coverImgUrl" :data-id="item.id"/></div>
           <span class="innerText">{{item.name}}</span>
         </div>
       </div>
@@ -59,9 +59,9 @@
         wx.navigateBack()
       },
       toPlayListDetail(e){
-        this.$store.commit('setSongListId',e.target.dataset.index);
+        let id =e.target.dataset.id
         wx.navigateTo({
-          url: '../songList/main',
+          url: '../songList/main?id='+id,
         })
       },
     },

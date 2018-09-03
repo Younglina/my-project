@@ -65,7 +65,8 @@
       })
     },
     onPageScroll(e){
-      if(e.scrollTop- this.screenHeight > 50){
+      console.log(e)
+      if(e.scrollTop> 50){
         this.comments.push(...(this.comment.comments.slice(this.comments.length,this.comments.length+10)))
       }
     },

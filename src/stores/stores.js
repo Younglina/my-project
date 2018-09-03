@@ -38,7 +38,8 @@ export default new Vuex.Store({
       "followed": false,
       "signature": "你好，再见。",
       "authority": 0
-    }
+    },
+    rank:['bs','xg','yc','rg']
   },
   mutations: {
     setPlaying: (state,data) => {
@@ -52,6 +53,9 @@ export default new Vuex.Store({
     },
     setCurrentSongList: (state,data) => {
       state.currentSongList = data
+    },
+    setRank:(state,data)=>{
+      state.rank = data;
     }
   }
 });

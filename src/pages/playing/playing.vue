@@ -3,11 +3,13 @@
     <div class="lrcMain">
       <div class="background">
         <div class="filter"></div>
-        <img :src="currentPlaying.al.picUrl" width="100%" height="100%">
+        <img v-if="currentPlaying.al" :src="currentPlaying.al.picUrl" width="100%" height="100%">
+        <img v-else="currentPlaying.song.album.blurPicUrl" :src="currentPlaying.song.album.blurPicUrl" width="100%" height="100%">
       </div>
     </div>
     <div class="rotateImg" v-show="!showImg" @click="showImg = !showImg">
-      <image :src="currentPlaying.al.picUrl" class="musicImg"></image>
+      <image  v-if="currentPlaying.al" :src="currentPlaying.al.picUrl" class="musicImg"></image>
+      <image   v-else="currentPlaying.song.album.blurPicUrl" :src="currentPlaying.song.album.blurPicUrl" class="musicImg"></image>
     </div>
     <div class="playMain" v-show="showImg" @click.stop="showImg = !showImg">
       <div class="lyric-wrapper"  ref="lyricList">
@@ -66,14 +68,12 @@
       this.$fly.all([this.$fly.get(this.$api+'/music/url?id='+id),this.$fly.get(this.$api+'/lyric?id='+id)]).then(
         this.$fly.spread(function (urlRes,lyricRes){
           if(urlRes.data.msg!="Cheating"){
-            console.log(1)
             that.$refs.audio.src =urlRes.data.data[0].url;
           }
           that.currentLyric = new Lyric(lyricRes.data.lrc.lyric,that.handleLyric);
-          console.log(that.currentLyric)
-          that.currentLyric.play();
-          that.currentLineNum = 0;
-          that.$refs.lyricList.scrollTo(0, 0, 1000);
+          // that.currentLyric.play();
+          // that.currentLineNum = 0;
+          // that.$refs.lyricList.scrollTo(0, 0, 1000);
         })
       )
     },

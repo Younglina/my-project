@@ -21,7 +21,7 @@
         <div class="iconItem" >
           <i-icon type="message"color="white" size="24" @click="toComment"/><span>{{songList.commentCount}}</span>
         </div>
-        <div  class="iconItem"><i-icon type="share" color="white" size="24"/><span>{{songList.shareCount}}</span></div>
+        <div  class="iconItem"><i-icon type="share" color="white" size="24" /><span>{{songList.shareCount}}</span></div>
         <div  class="iconItem"><i-icon type="success" color="white" size="24"/><span>下载</span></div>
         <div class="iconItem"><i-icon type="editor" color="white" size="24"/><span>多选</span></div>
       </div>
@@ -109,7 +109,8 @@
       let that = this;
       const Fly = require('flyio/dist/npm/wx');
       let fly = new Fly();
-      fly.get(that.$api+'/playlist/detail?id='+this.$store.state.songListId).then(res=>{
+      let id = this.$root.$mp.query.id;
+      fly.get(that.$api+'/playlist/detail?id='+id).then(res=>{
         that.songList = res.data.playlist;
         that.loading=false;
         return;

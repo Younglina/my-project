@@ -26,9 +26,11 @@
       toPlaying(el){
         let id = el.mp.target.dataset.id;
         let index = el.mp.target.dataset.index;
+        if(id && index){
         this.$store.commit('setPlaying', this.songList[index])
         wx.navigateTo({url:'../playing/main?id='+id})
         this.$store.commit('setCurrentSongList', this.songList);
+        }
       }
     }
   };

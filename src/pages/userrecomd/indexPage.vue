@@ -11,10 +11,6 @@
     </div>
     <div class="centerView">
       <div class="innerView">
-        <div><i-icon class="micon" type="addressbook" size="28" color="red" /></div>
-        <span class="iconSpan">私人</span>
-      </div>
-      <div class="innerView">
         <div><i-icon  class="micon" type="activity" size="28" color="red"  @click='toNewSong'/></div>
         <span class="iconSpan">每日推荐</span>
       </div>
@@ -40,9 +36,9 @@
     </div>
     <div class="personalized">
       <span class="perSpan">推荐新音乐 ></span>
-      <div class="gdView">
-        <div class="gdInnerView" v-for="item in personalizedNewsong" :key="item.id">
-          <img class="innerImg" :src="item.song.album.blurPicUrl" />
+      <div class="gdView" @click="toPlay">
+        <div class="gdInnerView" v-for="item in personalizedNewsong" :key="item.id" >
+          <img class="innerImg" :src="item.song.album.blurPicUrl" :data-id="item.id" :data-index="index"/>
           <span class="innerText">{{item.name}}</span>
         </div>
       </div>
@@ -74,14 +70,9 @@
         current:0
       }
     },
-    filters:{
-      formatData(value){
-        return  ;
-      }
-    },
     methods:{
       toPlayListDetail(id){
-        this.$store.commit('setSongListId',id);
+        // this.$store.commit('setSongListId',id);
         var url = '../songList/main?id='+id;
         wx.navigateTo({
           url
@@ -96,6 +87,14 @@
         wx.navigateTo({
           url: '../newsong/main',
         })
+      },
+      toPlay(el){
+        let id = el.mp.target.dataset.id;
+        let index = el.mp.target.dataset.index;
+        if(id){
+          this.$store.commit('setPlaying', this.personalizedNewsong[index]);
+          wx.navigateTo({url:'../playing/main?id='+id})
+        }
       },
       toRank(){
         wx.navigateTo({url:'../paihang/main'})
