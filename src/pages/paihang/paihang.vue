@@ -5,10 +5,10 @@
     <div class="rankMain" >
       <span>官方榜</span>
       <div>
-        <div @click='toPlayListDetail(bs.playlist.id)'><rank-comp :img="imgs.bs" :items="bs.playlist.tracks.slice(0,3)"></rank-comp></div>
-        <div @click='toPlayListDetail(xg.playlist.id)'><rank-comp :img="imgs.xg" :items="xg.playlist.tracks.slice(0,3)"></rank-comp></div>
-        <div @click='toPlayListDetail(yc.playlist.id)'><rank-comp :img="imgs.yc" :items="yc.playlist.tracks.slice(0,3)"></rank-comp></div>
-        <div @click='toPlayListDetail(rg.playlist.id)'> <rank-comp :img="imgs.rg" :items="rg.playlist.tracks.slice(0,3)"></rank-comp></div>
+        <div @click='toPlayListDetail(ids.bs)'><rank-comp :img="imgs.bs" :items="bs"></rank-comp></div>
+        <div @click='toPlayListDetail(ids.xg)'><rank-comp :img="imgs.xg" :items="xg"></rank-comp></div>
+        <div @click='toPlayListDetail(ids.yc)'><rank-comp :img="imgs.yc" :items="yc"></rank-comp></div>
+        <div @click='toPlayListDetail(ids.rg)'> <rank-comp :img="imgs.rg" :items="rg"></rank-comp></div>
       </div>
     </div>
     <div>
@@ -46,6 +46,10 @@
         sg:'',
         yc:'',
         rg:'',
+        ids:{bs:'',
+          sg:'',
+          yc:'',
+          rg:'',},
         imgs:{
           bs:'../../resource/img/bs.jpg',
           xg:'../../resource/img/xg.jpg',
@@ -83,10 +87,15 @@
         this.$fly.get(this.$api+"/top/list?idx=2"),
         this.$fly.get(this.$api+"/top/list?idx=1")
       ]).then(this.$fly.spread((bs,xg,yc,rg)=>{
-        this.bs = bs.data;
-        this.xg = xg.data;
-        this.yc = yc.data;
-        this.rg = rg.data;
+        console.log(bs.data)
+        this.bs = bs.data.playlist.tracks.slice(0,3);
+        this.ids.bs=bs.data.playlist.id;
+        this.xg = xg.data.playlist.tracks.slice(0,3);
+        this.ids.xg=xg.data.playlist.id;
+        this.yc = yc.data.playlist.tracks.slice(0,3);
+        this.ids.yc=yc.data.playlist.id;
+        this.rg = rg.data.playlist.tracks.slice(0,3);
+        this.ids.rg=rg.data.playlist.id;
         // this.$store.commit('setRank',[bs.data.playlist,xg.data.playlist,yc.data.playlist,rg.data.playlist]);
         this.loading = false;
       }))

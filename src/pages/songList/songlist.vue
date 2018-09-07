@@ -62,6 +62,7 @@
         songName:'',
         loading:true,
         visible: false,
+        lazyLen:10,
         actions:[
           {
             name: '下载',
@@ -90,12 +91,15 @@
         this.open = true;
         this.songName = name;
       },
-      goback(){
-        wx.navigateBack()
+      onPageScroll(e){
+        console.log(e)
+        if(e.scrollTop> 50){
+          this.lazyLen+=10;
+        }
       },
       toComment(){
         // this.$store.commit('setCurrentSongList', this.songList);
-        wx.navigateTo({url:'../comment/main?id='+this.songList.id})
+        wx.navigateTo({url:'../comment/main?id='+this.songList.id+'&type=playlist'})
       },
       toPlaying(el){
         let id = el.mp.target.dataset.id;
@@ -115,19 +119,7 @@
         that.loading=false;
         return;
       })
-      // if(this.$route.params.id){
-      //   this.$axios.get(this.$api+'/playlist/detail?id='+this.$route.params.id).then(res=>{
-      //     that.songList = res.data.playlist;
-      //     that.loading=true;
-      //     return;
-      //   })
-      // }
-      //
-      // if(this.currentSongList && this.currentSongList.tracks){
-      //   this.loading=true;
-      //   this.songList = this.currentSongList;
-      //   return;
-      // }
+
     }
   }
 </script>

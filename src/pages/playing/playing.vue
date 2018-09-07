@@ -31,7 +31,7 @@
     <div class="lrcDiv">
       <i-progress percent="25" hide-info></i-progress>
       <div class="playControl">
-        <i-icon type="undo" size="24"/>
+        <i-icon type="message"color="white" size="24" @click="toComment"/>
         <i-icon type="return" size="24"/>
         <!--<i-icon :value="playIcon" @click="togglePlay"></i-icon>-->
         <i-icon type="playon" size="24"/>
@@ -78,6 +78,11 @@
       )
     },
     methods:{
+      toComment(){
+        let that = this;
+        // this.$store.commit('setCurrentSongList', this.songList);
+        wx.navigateTo({url:'../comment/main?id='+that.currentPlaying.id+'&type=music'})
+      },
       togglePlay(){
         this.playIcon = this.playing?'pause_circle_outline':'play_circle_outline';
         this.playing = !this.playing;
@@ -177,7 +182,7 @@
     position:absolute;
     bottom:0;
     width:100%;
-
+    padding:20px 0;
   }
   .btmSheet{
     width: 100%;

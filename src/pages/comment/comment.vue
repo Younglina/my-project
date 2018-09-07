@@ -72,7 +72,7 @@
     },
     onShow() {
       //通过option参数获取
-      let res =  this.$fly.get(this.$api+'/comment/playlist?id='+this.$root.$mp.query.id);
+      let res =  this.$fly.get(this.$api+'/comment/'+this.$root.$mp.query.type+'?id='+this.$root.$mp.query.id);
       res.then(res=>{
         this.comment = res.data;
         this.comments = res.data.comments.slice(0,10);
