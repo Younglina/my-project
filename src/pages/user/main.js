@@ -6,10 +6,7 @@ app.$mount()
 export default {
   config: {
     usingComponents: {
-      "i-tabs": "../../iview/tabs/index",
-      "i-tab": "../../iview/tab/index",
-      "i-cell-group": "../../iview/cell-group/index",
-      "i-cell": "../../iview/cell/index"
+
     },
   }
 }

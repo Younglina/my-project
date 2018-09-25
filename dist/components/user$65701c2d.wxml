@@ -1,9 +1,0 @@
-<template name="user$65701c2d">
-  <view class="_div data-v-52c47f27">
-    <i-cell-group class="_i-cell-group data-v-52c47f27">
-      <i-cell wx:key="item.key" key="{{item.key}}" title="{{item.words}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{musicList}}" wx:for-index="index" wx:for-item="item" class="_i-cell data-v-52c47f27">
-        <image class="_img data-v-52c47f27 iconImg" src="{{item.url}}" slot="icon"></image>
-      </i-cell>
-    </i-cell-group>
-  </view>
-</template>
