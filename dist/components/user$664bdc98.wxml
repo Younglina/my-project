@@ -1,0 +1,35 @@
+<template name="user$664bdc98">
+  <view class="_div data-v-ebdbe40c userMusic">
+    <view class="_div data-v-ebdbe40c myMusic">
+      <label class="_span data-v-ebdbe40c">歌单</label>
+      <label class="_span data-v-ebdbe40c">共被收藏0次</label>
+    </view>
+    <view class="_div data-v-ebdbe40c myList">
+      <view class="_div data-v-ebdbe40c musicImg my">
+        <image style="width:40px;height:40px" src="/resource/img/paihan.png" alt class="_img data-v-ebdbe40c"></image>
+      </view>
+      <view class="_div data-v-ebdbe40c innerMusic">
+        <label class="_span data-v-ebdbe40c title">我的听歌排行榜</label>
+        <label class="_span data-v-ebdbe40c sub">累计听歌7831首</label>
+      </view>
+    </view>
+    <view class="_div data-v-ebdbe40c myList">
+      <image src="/resource/img/like.jpeg" class="_img data-v-ebdbe40c musicImg" alt></image>
+      <view class="_div data-v-ebdbe40c innerMusic">
+        <label class="_span data-v-ebdbe40c title">我喜欢的音乐</label>
+        <label class="_span data-v-ebdbe40c sub">{{playlist[0].trackCount}}首,播放{{playlist[0].playCount}}次</label>
+      </view>
+    </view>
+    <view class="_div data-v-ebdbe40c myMusic">
+      <label class="_span data-v-ebdbe40c">收藏的歌单({{playlist.length-1}})</label>
+      <label class="_span data-v-ebdbe40c"></label>
+    </view>
+    <view class="_div data-v-ebdbe40c myList" wx:if="{{index!==0}}" wx:key="item.id" key="{{item.id}}" bindtap="handleProxy" data-eventid="{{'0-'+index}}" data-comkey="{{$k}}" wx:for="{{playlist}}" wx:for-index="index" wx:for-item="item">
+      <image src="{{item.coverImgUrl}}" class="_img data-v-ebdbe40c musicImg" alt></image>
+      <view class="_div data-v-ebdbe40c innerMusic">
+        <label class="_span data-v-ebdbe40c title">{{item.name}}</label>
+        <label class="_span data-v-ebdbe40c sub">{{item.trackCount}}首,播放{{item.playCount}}次</label>
+      </view>
+    </view>
+  </view>
+</template>
