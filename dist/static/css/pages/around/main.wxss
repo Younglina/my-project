@@ -1,4 +1,3 @@
-@import "/static/css/vendor.wxss";
 
 .map_container.data-v-2bd42490 {
   height: 600rpx;

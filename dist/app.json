@@ -1,16 +1,15 @@
 {
   "pages": [
-    "pages/userrecomd/main",
+    "pages/user/main",
     "pages/around/main",
     "pages/comment/main",
-    "pages/musicIndex/main",
     "pages/newsong/main",
     "pages/paihang/main",
     "pages/playing/main",
     "pages/searchPage/main",
     "pages/songList/main",
     "pages/songlistRecomd/main",
-    "pages/user/main"
+    "pages/userrecomd/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

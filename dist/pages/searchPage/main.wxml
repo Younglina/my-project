@@ -1,1 +1,1 @@
-<import src="../../components/serachPage$304d7750" /><template is="serachPage$304d7750" data="{{ ...$root['0'], $root }}"/>
+<import src="../../components/searchPage$7bec1f58" /><template is="searchPage$7bec1f58" data="{{ ...$root['0'], $root }}"/>

@@ -1,13 +1,261 @@
 global.webpackJsonp([2],{
 
-/***/ 100:
+/***/ 85:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paihang__ = __webpack_require__(86);
+
+
+
+var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_1__paihang__["a" /* default */]);
+app.$mount();
+/* harmony default export */ __webpack_exports__["default"] = ({
+  config: {
+    navigationBarTitleText: '排行榜',
+    usingComponents: {
+      "i-load-more": "../../iview/load-more/index"
+    }
+  }
+});
+
+/***/ }),
+
+/***/ 86:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_paihang_vue__ = __webpack_require__(88);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_02086006_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_paihang_vue__ = __webpack_require__(93);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(87)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-02086006"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_paihang_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_02086006_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_paihang_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/pages/paihang/paihang.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] paihang.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-02086006", Component.options)
+  } else {
+    hotAPI.reload("data-v-02086006", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ 87:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 101:
+/***/ 88:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_rank_comp__ = __webpack_require__(89);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["a"] = ({
+  name: "paihang",
+  data: function data() {
+    return {
+      loading: true,
+      bs: '',
+      sg: '',
+      yc: '',
+      rg: '',
+      ids: { bs: '',
+        sg: '',
+        yc: '',
+        rg: '' },
+      imgs: {
+        bs: '../../resource/img/bs.jpg',
+        xg: '../../resource/img/xg.jpg',
+        yc: '../../resource/img/yc.jpg',
+        rg: '../../resource/img/rg.jpg',
+        sc: "../../resource/img/sc.jpg",
+        dy: "../../resource/img/dy.jpg",
+        xh: "../../resource/img/xh.jpg",
+        douy: "../../resource/img/douy.jpg",
+        acg: "../../resource/img/acg.jpg",
+        gd: "../../resource/img/gd.jpg",
+        dj: "../../resource/img/dj.jpg",
+        mg: "../../resource/img/mg.jpg",
+        ituns: "../../resource/img/ituns.jpg",
+        uk: "../../resource/img/uk.jpg"
+      }
+    };
+  },
+
+  components: {
+    RankComp: __WEBPACK_IMPORTED_MODULE_0__components_rank_comp__["a" /* default */]
+  },
+  methods: {
+    toPlayListDetail: function toPlayListDetail(id) {
+      // this.$store.commit('setSongListId',id);
+      var url = '../songList/main?id=' + id;
+      wx.navigateTo({
+        url: url
+      });
+    }
+  },
+  mounted: function mounted() {
+    var _this = this;
+
+    this.$fly.all([this.$fly.get(this.$api + "/top/list?idx=3"), this.$fly.get(this.$api + "/top/list?idx=0"), this.$fly.get(this.$api + "/top/list?idx=2"), this.$fly.get(this.$api + "/top/list?idx=1")]).then(this.$fly.spread(function (bs, xg, yc, rg) {
+      console.log(bs.data);
+      _this.bs = bs.data.playlist.tracks.slice(0, 3);
+      _this.ids.bs = bs.data.playlist.id;
+      _this.xg = xg.data.playlist.tracks.slice(0, 3);
+      _this.ids.xg = xg.data.playlist.id;
+      _this.yc = yc.data.playlist.tracks.slice(0, 3);
+      _this.ids.yc = yc.data.playlist.id;
+      _this.rg = rg.data.playlist.tracks.slice(0, 3);
+      _this.ids.rg = rg.data.playlist.id;
+      // this.$store.commit('setRank',[bs.data.playlist,xg.data.playlist,yc.data.playlist,rg.data.playlist]);
+      _this.loading = false;
+    }));
+  }
+});
+
+/***/ }),
+
+/***/ 89:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_rank_comp_vue__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5d5d333b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_rank_comp_vue__ = __webpack_require__(92);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(90)
+}
+var normalizeComponent = __webpack_require__(0)
+/* script */
+
+/* template */
+
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-5d5d333b"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_rank_comp_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5d5d333b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_rank_comp_vue__["a" /* default */],
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src/components/rank-comp.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] rank-comp.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-5d5d333b", Component.options)
+  } else {
+    hotAPI.reload("data-v-5d5d333b", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
+
+
+/***/ }),
+
+/***/ 90:
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
+/***/ 91:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28,7 +276,7 @@ global.webpackJsonp([2],{
 
 /***/ }),
 
-/***/ 102:
+/***/ 92:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -61,7 +309,7 @@ if (false) {
 
 /***/ }),
 
-/***/ 103:
+/***/ 93:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -75,31 +323,67 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
     staticClass: "rank"
   }, [_c('div', {
     staticClass: "rankMain"
-  }, [_c('span', [_vm._v("官方榜")]), _vm._v(" "), _c('div', [_c('rank-comp', {
+  }, [_c('span', [_vm._v("官方榜")]), _vm._v(" "), _c('div', [_c('div', {
+    attrs: {
+      "eventid": '0'
+    },
+    on: {
+      "click": function($event) {
+        _vm.toPlayListDetail(_vm.ids.bs)
+      }
+    }
+  }, [_c('rank-comp', {
     attrs: {
       "img": _vm.imgs.bs,
       "items": _vm.bs,
       "mpcomid": '0'
     }
-  }), _vm._v(" "), _c('rank-comp', {
+  })], 1), _vm._v(" "), _c('div', {
+    attrs: {
+      "eventid": '1'
+    },
+    on: {
+      "click": function($event) {
+        _vm.toPlayListDetail(_vm.ids.xg)
+      }
+    }
+  }, [_c('rank-comp', {
     attrs: {
       "img": _vm.imgs.xg,
       "items": _vm.xg,
       "mpcomid": '1'
     }
-  }), _vm._v(" "), _c('rank-comp', {
+  })], 1), _vm._v(" "), _c('div', {
+    attrs: {
+      "eventid": '2'
+    },
+    on: {
+      "click": function($event) {
+        _vm.toPlayListDetail(_vm.ids.yc)
+      }
+    }
+  }, [_c('rank-comp', {
     attrs: {
       "img": _vm.imgs.yc,
       "items": _vm.yc,
       "mpcomid": '2'
     }
-  }), _vm._v(" "), _c('rank-comp', {
+  })], 1), _vm._v(" "), _c('div', {
+    attrs: {
+      "eventid": '3'
+    },
+    on: {
+      "click": function($event) {
+        _vm.toPlayListDetail(_vm.ids.rg)
+      }
+    }
+  }, [_c('rank-comp', {
     attrs: {
       "img": _vm.imgs.rg,
       "items": _vm.rg,
       "mpcomid": '3'
     }
-  })], 1)]), _vm._v(" "), _c('div', [_c('span', [_vm._v("全球榜")]), _vm._v(" "), _c('div', {
+  })], 1)])]), _vm._v(" "), _c('div', [_c('span', [_vm._v("全球榜")]), _vm._v(" "), _c('div', {
     staticClass: "rankDiv"
   }, [_c('div', {
     staticClass: "rankInner"
@@ -156,241 +440,7 @@ if (false) {
   }
 }
 
-/***/ }),
-
-/***/ 95:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__paihang__ = __webpack_require__(96);
-
-
-
-var app = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a(__WEBPACK_IMPORTED_MODULE_1__paihang__["a" /* default */]);
-app.$mount();
-/* harmony default export */ __webpack_exports__["default"] = ({
-  config: {
-    navigationBarTitleText: '排行榜',
-    usingComponents: {
-      "i-load-more": "../../iview/load-more/index"
-    }
-  }
-});
-
-/***/ }),
-
-/***/ 96:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_paihang_vue__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_02086006_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_paihang_vue__ = __webpack_require__(103);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(97)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-
-/* template */
-
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-02086006"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_paihang_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_02086006_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_paihang_vue__["a" /* default */],
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\pages\\paihang\\paihang.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] paihang.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-02086006", Component.options)
-  } else {
-    hotAPI.reload("data-v-02086006", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
-
-
-/***/ }),
-
-/***/ 97:
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 98:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__components_rank_comp__ = __webpack_require__(99);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-  name: "paihang",
-  data: function data() {
-    return {
-      loading: true,
-      bs: '',
-      sg: '',
-      yc: '',
-      rg: '',
-      imgs: {
-        bs: '../../resource/img/bs.jpg',
-        xg: '../../resource/img/xg.jpg',
-        yc: '../../resource/img/yc.jpg',
-        rg: '../../resource/img/rg.jpg',
-        sc: "../../resource/img/sc.jpg",
-        dy: "../../resource/img/dy.jpg",
-        xh: "../../resource/img/xh.jpg",
-        douy: "../../resource/img/douy.jpg",
-        acg: "../../resource/img/acg.jpg",
-        gd: "../../resource/img/gd.jpg",
-        dj: "../../resource/img/dj.jpg",
-        mg: "../../resource/img/mg.jpg",
-        ituns: "../../resource/img/ituns.jpg",
-        uk: "../../resource/img/uk.jpg"
-      }
-    };
-  },
-
-  components: {
-    RankComp: __WEBPACK_IMPORTED_MODULE_0__components_rank_comp__["a" /* default */]
-  },
-  methods: {
-    goback: function goback() {
-      this.$router.go(-1);
-    }
-  },
-  mounted: function mounted() {
-    var _this = this;
-
-    this.$fly.all([this.$fly.get(this.$api + "/top/list?idx=3"), this.$fly.get(this.$api + "/top/list?idx=0"), this.$fly.get(this.$api + "/top/list?idx=2"), this.$fly.get(this.$api + "/top/list?idx=1")]).then(this.$fly.spread(function (bs, xg, yc, rg) {
-      _this.bs = bs.data.playlist.tracks.slice(0, 3);
-      _this.xg = xg.data.playlist.tracks.slice(0, 3);
-      _this.yc = yc.data.playlist.tracks.slice(0, 3);
-      _this.rg = rg.data.playlist.tracks.slice(0, 3);
-      _this.loading = false;
-    }));
-  }
-});
-
-/***/ }),
-
-/***/ 99:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_rank_comp_vue__ = __webpack_require__(101);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5d5d333b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_rank_comp_vue__ = __webpack_require__(102);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(100)
-}
-var normalizeComponent = __webpack_require__(0)
-/* script */
-
-/* template */
-
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = "data-v-5d5d333b"
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_rank_comp_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_5d5d333b_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_rank_comp_vue__["a" /* default */],
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\components\\rank-comp.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] rank-comp.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-5d5d333b", Component.options)
-  } else {
-    hotAPI.reload("data-v-5d5d333b", Component.options)
-  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["a"] = (Component.exports);
-
-
 /***/ })
 
-},[95]);
+},[85]);
 //# sourceMappingURL=main.js.map

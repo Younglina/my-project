@@ -19,7 +19,7 @@
       </div>
       <div class="iconList">
         <div class="iconItem" >
-          <i-icon type="message"color="white" size="24" @click="toComment"/><span>{{songList.commentCount}}</span>
+          <i-icon type="message" color="white" size="24" @click="toComment"/><span>{{songList.commentCount}}</span>
         </div>
         <div  class="iconItem"><i-icon type="share" color="white" size="24" /><span>{{songList.shareCount}}</span></div>
         <div  class="iconItem"><i-icon type="success" color="white" size="24"/><span>下载</span></div>
@@ -90,12 +90,6 @@
       openBottomSheet(name){
         this.open = true;
         this.songName = name;
-      },
-      onPageScroll(e){
-        console.log(e)
-        if(e.scrollTop> 50){
-          this.lazyLen+=10;
-        }
       },
       toComment(){
         // this.$store.commit('setCurrentSongList', this.songList);

@@ -1,4 +1,3 @@
-@import "/static/css/vendor.wxss";
 
 .userView.data-v-5f924850 {
   display: flex;

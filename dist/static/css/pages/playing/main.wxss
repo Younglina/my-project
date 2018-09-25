@@ -1,4 +1,3 @@
-@import "/static/css/vendor.wxss";
 
 .main.data-v-22b36e4e {
   overflow: hidden;
@@ -72,6 +71,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
+  padding: 40rpx 0;
 }
 .btmSheet.data-v-22b36e4e {
   width: 100%;

@@ -31,7 +31,7 @@
     <div class="lrcDiv">
       <i-progress percent="25" hide-info></i-progress>
       <div class="playControl">
-        <i-icon type="message"color="white" size="24" @click="toComment"/>
+        <i-icon type="message" color="white" size="24" @click="toComment"/>
         <i-icon type="return" size="24"/>
         <!--<i-icon :value="playIcon" @click="togglePlay"></i-icon>-->
         <i-icon type="playon" size="24"/>

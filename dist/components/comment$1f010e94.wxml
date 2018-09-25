@@ -1,0 +1,46 @@
+<template name="comment$1f010e94">
+  <scroll-view class="_scroll-view data-v-782068b0 comment" scroll-y="{{true}}">
+    <label style="font-size:14px" class="_span data-v-782068b0">精彩评论</label>
+    <view class="_div data-v-782068b0">
+      <i-cell-group class="_i-cell-group data-v-782068b0">
+        <i-cell class="_i-cell data-v-782068b0 list" ripple wx:key="item.id" key="{{item.id}}" wx:for="{{comment.hotComments}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-782068b0 listMain" button>
+            <view class="_div data-v-782068b0">
+              <i-avatar src="{{item.user.avatarUrl}}" class="_i-avatar data-v-782068b0"></i-avatar>
+            </view>
+            <view class="_div data-v-782068b0 listR">
+              <view class="_div data-v-782068b0 listT">
+                <label class="_span data-v-782068b0">{{item.user.nickname}}</label>
+                <view class="_div data-v-782068b0">{{item.likedCount}}
+                  <i-icon type="like" class="_i-icon data-v-782068b0"></i-icon>
+                </view>
+              </view>
+              <label class="_span data-v-782068b0">{{item.content}}</label>
+            </view>
+          </view>
+        </i-cell>
+      </i-cell-group>
+    </view>
+    <label style="font-size:14px" class="_span data-v-782068b0">最新评论</label>
+    <view class="_div data-v-782068b0">
+      <i-cell-group class="_i-cell-group data-v-782068b0">
+        <i-cell class="_i-cell data-v-782068b0 list" wx:key="item.id" key="{{item.id}}" wx:for="{{comments}}" wx:for-index="index" wx:for-item="item">
+          <view class="_div data-v-782068b0 listMain">
+            <view class="_div data-v-782068b0">
+              <i-avatar src="{{item.user.avatarUrl}}" class="_i-avatar data-v-782068b0"></i-avatar>
+            </view>
+            <view class="_div data-v-782068b0 listR">
+              <view class="_div data-v-782068b0 listT">
+                <label class="_span data-v-782068b0">{{item.user.nickname}}</label>
+                <view class="_div data-v-782068b0">{{item.likedCount}}
+                  <i-icon type="like" class="_i-icon data-v-782068b0"></i-icon>
+                </view>
+              </view>
+              <label class="_span data-v-782068b0">{{item.content}}</label>
+            </view>
+          </view>
+        </i-cell>
+      </i-cell-group>
+    </view>
+  </scroll-view>
+</template>

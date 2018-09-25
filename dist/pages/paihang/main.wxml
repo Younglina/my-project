@@ -1,1 +1,1 @@
-<import src="../../components/paihang$1c451ae4" /><template is="paihang$1c451ae4" data="{{ ...$root['0'], $root }}"/>
+<import src="../../components/paihang$7a67700c" /><template is="paihang$7a67700c" data="{{ ...$root['0'], $root }}"/>

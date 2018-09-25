@@ -8,8 +8,6 @@ export default {
     usingComponents: {
       "i-progress": "../../iview/progress/index",
       "i-icon": "../../iview/icon/index",
-      "i-cell-group": "../../iview/cell-group/index",
-      "i-cell": "../../iview/cell/index",
       "i-action-sheet": "../../iview/action-sheet/index"
     },
   }

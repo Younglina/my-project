@@ -1,13 +1,13 @@
-global.webpackJsonp([5],{
+global.webpackJsonp([6],{
 
-/***/ 120:
+/***/ 110:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__songlist__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__songlist__ = __webpack_require__(111);
 
 
 
@@ -28,16 +28,16 @@ app.$mount();
 
 /***/ }),
 
-/***/ 121:
+/***/ 111:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_songlist_vue__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_7e93a230_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_songlist_vue__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_mpvue_loader_lib_selector_type_script_index_0_songlist_vue__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_mpvue_loader_lib_template_compiler_index_id_data_v_7e93a230_hasScoped_true_transformToRequire_video_src_source_src_img_src_image_xlink_href_node_modules_mpvue_loader_lib_selector_type_template_index_0_songlist_vue__ = __webpack_require__(114);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(122)
+  __webpack_require__(112)
 }
 var normalizeComponent = __webpack_require__(0)
 /* script */
@@ -57,7 +57,7 @@ var Component = normalizeComponent(
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\pages\\songList\\songlist.vue"
+Component.options.__file = "src/pages/songList/songlist.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key.substr(0, 2) !== "__"})) {console.error("named exports are not supported in *.vue files.")}
 if (Component.options.functional) {console.error("[vue-loader] songlist.vue: functional components are not supported with templates, they should use render functions.")}
 
@@ -82,14 +82,14 @@ if (false) {(function () {
 
 /***/ }),
 
-/***/ 122:
+/***/ 112:
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
 
 /***/ }),
 
-/***/ 123:
+/***/ 113:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -157,6 +157,7 @@ if (false) {(function () {
       songName: '',
       loading: true,
       visible: false,
+      lazyLen: 10,
       actions: [{
         name: '下载',
         icon: 'success'
@@ -182,12 +183,9 @@ if (false) {(function () {
       this.open = true;
       this.songName = name;
     },
-    goback: function goback() {
-      wx.navigateBack();
-    },
     toComment: function toComment() {
       // this.$store.commit('setCurrentSongList', this.songList);
-      wx.navigateTo({ url: '../comment/main?id=' + this.songList.id });
+      wx.navigateTo({ url: '../comment/main?id=' + this.songList.id + '&type=playlist' });
     },
     toPlaying: function toPlaying(el) {
       var id = el.mp.target.dataset.id;
@@ -201,30 +199,18 @@ if (false) {(function () {
     var that = this;
     var Fly = __webpack_require__(3);
     var fly = new Fly();
-    fly.get(that.$api + '/playlist/detail?id=' + this.$store.state.songListId).then(function (res) {
+    var id = this.$root.$mp.query.id;
+    fly.get(that.$api + '/playlist/detail?id=' + id).then(function (res) {
       that.songList = res.data.playlist;
       that.loading = false;
       return;
     });
-    // if(this.$route.params.id){
-    //   this.$axios.get(this.$api+'/playlist/detail?id='+this.$route.params.id).then(res=>{
-    //     that.songList = res.data.playlist;
-    //     that.loading=true;
-    //     return;
-    //   })
-    // }
-    //
-    // if(this.currentSongList && this.currentSongList.tracks){
-    //   this.loading=true;
-    //   this.songList = this.currentSongList;
-    //   return;
-    // }
   }
 });
 
 /***/ }),
 
-/***/ 124:
+/***/ 114:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -407,5 +393,5 @@ if (false) {
 
 /***/ })
 
-},[120]);
+},[110]);
 //# sourceMappingURL=main.js.map

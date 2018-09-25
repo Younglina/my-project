@@ -10,7 +10,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "better-scroll": "^1.12.6",
     "flyio": "^0.6.0",
+    "lyric-parser": "^1.0.1",
     "mpvue": "^1.0.11",
     "vuex": "^3.0.1"
   },
