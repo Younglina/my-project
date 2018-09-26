@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/user/main",
+    "pages/userrecomd/main",
     "pages/around/main",
     "pages/comment/main",
     "pages/newsong/main",
@@ -9,7 +9,7 @@
     "pages/searchPage/main",
     "pages/songList/main",
     "pages/songlistRecomd/main",
-    "pages/userrecomd/main"
+    "pages/user/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

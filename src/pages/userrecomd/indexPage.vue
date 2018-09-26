@@ -4,7 +4,7 @@
       <swiper  indicator-dots indicator-color="glay" indicator-active-color='red' autoplay="2000" circular>
         <block v-for="item in mvFirst" :key="item.id">
           <swiper-item>
-            <image :src="item.cover"></image>
+            <img :src="item.cover" />
           </swiper-item>
         </block>
       </swiper>
@@ -19,7 +19,7 @@
         <span class="iconSpan">歌单</span>
       </div>
       <div class="innerView">
-        <div><i-icon  class="micon"type="barrage" size="28" color="red" @click="toRank"/></div>
+        <div><i-icon  class="micon" type="barrage" size="28" color="red" @click="toRank"/></div>
         <span class="iconSpan">排行榜</span>
       </div>
     </div>

@@ -261,7 +261,7 @@ var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._sel
       attrs: {
         "mpcomid": '0-' + index
       }
-    }, [_c('image', {
+    }, [_c('img', {
       attrs: {
         "src": item.cover
       }
