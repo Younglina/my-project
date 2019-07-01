@@ -784,7 +784,7 @@ if (false) {(function () {
     },
     toAround: function toAround() {
       wx.navigateTo({
-        url: "../../around/main"
+        url: "/pages/around/main"
       });
     }
   }

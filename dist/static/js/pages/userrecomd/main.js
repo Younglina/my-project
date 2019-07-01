@@ -149,7 +149,10 @@ if (false) {(function () {
 //
 //
 //
-
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   name: "music-recommed",
@@ -186,32 +189,55 @@ if (false) {(function () {
       var index = el.mp.target.dataset.index;
       if (id) {
         this.$store.commit('setPlaying', this.personalizedNewsong[index]);
-        wx.navigateTo({ url: '../playing/main?id=' + id });
+        wx.navigateTo({
+          url: '../playing/main?id=' + id
+        });
       }
     },
     toRank: function toRank() {
-      wx.navigateTo({ url: '../paihang/main' });
+      wx.navigateTo({
+        url: '../paihang/main'
+      });
     },
     goListPage: function goListPage() {
-      this.$router.push({ name: 'songListPage' });
+      this.$router.push({
+        name: 'songListPage'
+      });
     },
     handleChange: function handleChange(detail) {
       this.current = detail.key;
     }
   },
+  onLoad: function onLoad() {
+    wx.cloud.init({
+      traceUser: true // 用户信息会显示在云开发控制台的用户面板中
+    });
+    console.log(111);
+    wx.cloud.callFunction({
+      name: 'test' // 云函数名称
+    }).then(function (res) {
+      console.log(res);
+    }).catch(function (err) {
+      console.error(err);
+    });
+  },
   created: function created() {
     var Fly = __webpack_require__(3);
     var fly = new Fly();
     var that = this;
+
     function getMvFist() {
       return fly.get(that.$api + '/mv/first');
     }
+
     function getNewSong() {
       return fly.get(that.$api + '/personalized/newsong');
     }
+
     function getRecomRes() {
       return fly.get(that.$api + '/personalized');
     }
+
     function getPersDj() {
       return fly.get(that.$api + '/personalized/djprogram');
     }
@@ -224,7 +250,8 @@ if (false) {(function () {
           that.mvFirst = mvF.data.data.slice(0, 6);
           that.personalizedNewsong = NewS.data.result.slice(0, 6);
           that.recommendResource = RecomRes.data.result.slice(0, 6).map(function (item) {
-            item.playCount = parseInt(item.playCount / 10000) + '万';return item;
+            item.playCount = parseInt(item.playCount / 10000) + '万';
+            return item;
           });
           that.personalizedDJprogram = PresDj.data.result.slice(0, 6);
         }))

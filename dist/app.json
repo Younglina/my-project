@@ -40,5 +40,6 @@
         "selectedIconPath": "/resource/img/zhanghaos.png"
       }
     ]
-  }
+  },
+  "cloud": true
 }

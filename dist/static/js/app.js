@@ -53,7 +53,8 @@ app.$mount();
         "iconPath": "/resource/img/zhanghao.png",
         "selectedIconPath": "/resource/img/zhanghaos.png"
       }]
-    }
+    },
+    "cloud": true
   }
 });
 
