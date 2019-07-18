@@ -3,7 +3,7 @@ import App from './App'
 import store from './stores/stores'
 Vue.config.productionTip = false
 App.mpType = 'app'
-const apiUrl = 'http://134.175.224.127:7003/'
+const apiUrl = 'http://134.175.224.127:7003'
 Vue.prototype.$api = apiUrl;
 const Fly = require('flyio/dist/npm/wx');
 let fly = new Fly();

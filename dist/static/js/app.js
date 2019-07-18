@@ -14,7 +14,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.config.productionTip = false;
 __WEBPACK_IMPORTED_MODULE_1__App__["a" /* default */].mpType = 'app';
-var apiUrl = 'http://47.100.49.193:3000';
+var apiUrl = 'http://134.175.224.127:7003';
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.prototype.$api = apiUrl;
 var Fly = __webpack_require__(3);
 var fly = new Fly();
